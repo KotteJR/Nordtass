@@ -1,0 +1,244 @@
+{
+  "hero": {
+    "tagline": "Your Pet. Reimagined.",
+    "title": "Live Healthier.<br />Experience the Future of Pet Wellness.",
+    "description": "Support your pet’s health with natural supplements – tailored for every life stage.",
+    "ctaButton": "Go to Shop",
+    "features": [
+      {
+        "icon": "/natural.svg",
+        "title": "Natural Ingredients",
+        "description": "No unnecessary additives – only what helps."
+      },
+      {
+        "icon": "/digestion.svg",
+        "title": "Gentle on the Stomach",
+        "description": "Supports digestion without side effects."
+      },
+      {
+        "icon": "/science.svg",
+        "title": "Scientifically Backed",
+        "description": "Formulated with veterinary medical expertise."
+      },
+      {
+        "icon": "/easyuse.svg",
+        "title": "Easy to Give",
+        "description": "Convenient forms and tasty flavors – no mealtime battles."
+      }
+    ]
+  },
+  "featuredProducts": {
+    "sectionTag": "• Our Products",
+    "title": "Explore Our Functional Supplements",
+    "products": [
+      {
+        "id": "Bone",
+        "title": "Hip & Joint",
+        "description": "Supports joints and mobility – ideal for older pets.",
+        "button": "Buy Hip & Joint",
+        "image": "/products/hipjoint.png"
+      },
+      {
+        "id": "Pill",
+        "title": "Multipowerbiotic Gel",
+        "description": "Supports gut health with pre- and probiotics.",
+        "button": "Buy Multipowerbiotic",
+        "image": "/products/multipower.png"
+      },
+      {
+        "id": "Shield",
+        "title": "Lysine Gel",
+        "description": "Boosts the immune system during viral outbreaks.",
+        "button": "Buy Lysine",
+        "image": "/products/lysine.png"
+      },
+      {
+        "id": "Heart",
+        "title": "PetCalm Spray",
+        "description": "Naturally reduces stress. Perfect for travel or loud noises.",
+        "button": "Buy PetCalm",
+        "image": "/products/petcalm.png"
+      },
+      {
+        "id": "Zap",
+        "title": "Multipower",
+        "description": "Daily multivitamin for general wellbeing.",
+        "button": "Buy Multipower",
+        "image": "/products/multivitamine.png"
+      }
+    ]
+  },
+  "benefits": {
+    "sectionTag": "• Why Nordtass?",
+    "title": "Why More Are Choosing Us Every Day",
+    "benefits": [
+      {
+        "id": "01",
+        "title": "Active Pets, Longer Lives",
+        "description": "Reduce age-related issues with daily joint and nutrient support.",
+        "image": "/images/activelonger.png"
+      },
+      {
+        "id": "02",
+        "title": "Daily Digestive Health",
+        "description": "Foster a strong and balanced gut microbiome.",
+        "image": "/images/digestive.png"
+      },
+      {
+        "id": "03",
+        "title": "Calm & Safe",
+        "description": "Reduce stress during travel, separation, or fireworks.",
+        "image": "/images/calmsafe.png"
+      },
+      {
+        "id": "04",
+        "title": "Strong Immune System",
+        "description": "Helps your pet resist infections year-round.",
+        "image": "/images/immune.png"
+      },
+      {
+        "id": "05",
+        "title": "Easy Dosing",
+        "description": "No pills, no conflict – just convenient formats.",
+        "image": "/images/easy.png"
+      }
+    ]
+  },
+  "stats": {
+    "sectionTag": "• Results",
+    "title": "What Our Customers Experience",
+    "metrics": [
+      {
+        "icon": "/margin.svg",
+        "title": "Up to 78% Gross Margin\nAffordable Premium"
+      },
+      {
+        "icon": "/fast.svg",
+        "title": "Under 10 Seconds\nEasy Dosing"
+      },
+      {
+        "icon": "/natural-compat.svg",
+        "title": "100% Natural\nSuitable for All Pets"
+      },
+      {
+        "icon": "/support.svg",
+        "title": "Customer Support & Guidance\nFor Healthier Lives"
+      }
+    ]
+  },
+  "useCases": {
+    "sectionTag": "• Use Cases",
+    "title": "Real Scenarios, Real Wellness",
+    "cases": [
+      {
+        "title": "Senior Pets",
+        "description": "Joint and immune support for senior dogs and cats.",
+        "image": "/images/use1.png"
+      },
+      {
+        "title": "Travel Days",
+        "description": "Spray that reduces anxiety during transport and new environments.",
+        "image": "/images/use2.png"
+      },
+      {
+        "title": "Daily Routine",
+        "description": "Make supplements a natural part of mealtime.",
+        "image": "/images/use3.png"
+      }
+    ]
+  },
+  "industrySolutions": {
+    "sectionTag": "• For All Pets",
+    "title": "Health for Every Type of Pet",
+    "currentType": "Active Dogs",
+    "ctaButton": "See All Product Types",
+    "houseImage": "/images/3d/a.png",
+    "segments": [
+      {
+        "type": "Indoor Cats",
+        "image": "/images/3d/a.png"
+      },
+      {
+        "type": "Puppies",
+        "image": "/images/3d/b.png"
+      },
+      {
+        "type": "Senior Dogs",
+        "image": "/images/3d/c.png"
+      },
+      {
+        "type": "Anxious Pets",
+        "image": "/images/3d/d.png"
+      }
+    ]
+  },
+  "testimonials": {
+    "sectionTag": "• Customer Reviews",
+    "title": "What Our Customers Say",
+    "testimonial": [
+      {
+        "quote": "After just two weeks, our senior dog is running like he used to!",
+        "author": "Marcus L.",
+        "image": "/testimonials/marcus.jpg"
+      },
+      {
+        "quote": "Our cat's digestion is much better – no more accidents!",
+        "author": "Amanda S.",
+        "image": "/testimonials/marcus.jpg"
+      },
+      {
+        "quote": "The calming spray works wonders during thunderstorms. Max is so much more relaxed now!",
+        "author": "Sarah M.",
+        "image": "/testimonials/marcus.jpg"
+      },
+      {
+        "quote": "I was skeptical at first, but the joint supplement has given our 12-year-old lab a new lease on life.",
+        "author": "David K.",
+        "image": "/testimonials/marcus.jpg"
+      },
+      {
+        "quote": "Natural ingredients that actually work! Our puppy's immune system is stronger than ever.",
+        "author": "Lisa T.",
+        "image": "/testimonials/marcus.jpg"
+      }
+    ]
+  },
+  "compatibility": {
+    "sectionTag": "• Compatibility & Support",
+    "title": "Works With All Pets",
+    "integrations": [
+      {
+        "icon": "/species/dog.svg",
+        "name": "Dogs"
+      },
+      {
+        "icon": "/species/cat.svg",
+        "name": "Cats"
+      },
+      {
+        "icon": "/species/puppy.svg",
+        "name": "Puppies"
+      },
+      {
+        "icon": "/species/senior.svg",
+        "name": "Seniors"
+      }
+    ],
+    "features": {
+      "title": "Highlights",
+      "list": [
+        "Natural Ingredients",
+        "Easy to Give",
+        "Scientifically Formulated",
+        "Suitable for All Life Stages",
+        "Affordable Premium"
+      ]
+    },
+    "cta": {
+      "title": "Make It Easier to Be a Responsible Pet Owner.",
+      "description": "No subscriptions. No gimmicks. Just wellness from day one.",
+      "button": "Go to Shop",
+      "backgroundImage": "/landingpage/hero.png"
+    }
+  }
+}

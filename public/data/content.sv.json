@@ -1,0 +1,220 @@
+{
+  "hero": {
+      "tagline": "Ditt Djur. På Nytt.",
+      "title": "Lev Friskare.<br />Upplev Framtidens Djurhälsa.",
+      "description": "Stärk ditt djurs hälsa med naturliga tillskott – anpassade för varje livsfas.",
+      "ctaButton": "Gå till Butiken",
+      "features": [
+          {
+              "icon": "/natural.svg",
+              "title": "Naturligt Innehåll",
+              "description": "Inga onödiga tillsatser – bara det som gör nytta."
+          },
+          {
+              "icon": "/digestion.svg",
+              "title": "Skonsamt för magen",
+              "description": "Främjar matsmältning utan biverkningar."
+          },
+          {
+              "icon": "/science.svg",
+              "title": "Vetenskapligt Stödd",
+              "description": "Formulerad med veterinärmedicinsk expertis."
+          },
+          {
+              "icon": "/easyuse.svg",
+              "title": "Enkelt att Ge",
+              "description": "Smidiga former och god smak – inga strider vid måltiden."
+          }
+      ]
+  },
+  "featuredProducts": {
+      "sectionTag": "• Våra Produkter",
+      "title": "Utforska Våra Funktionella Kosttillskott",
+      "products": [
+          {
+              "id": "Bone",
+              "title": "Hip & Joint",
+              "description": "Stödjer leder och rörlighet – perfekt för äldre djur.",
+              "button": "Köp Hip & Joint",
+              "image": "/products/hipjoint.png"
+          },
+          {
+              "id": "Pill",
+              "title": "Multipowerbiotic Gel",
+              "description": "Främjar mag- och tarmhälsa med pre- och probiotika.",
+              "button": "Köp Multipowerbiotic",
+              "image": "/products/multipower.png"
+          },
+          {
+              "id": "Shield",
+              "title": "Lysine Gel",
+              "description": "Stärker immunförsvaret vid virusutbrott.",
+              "button": "Köp Lysine",
+              "image": "/products/lysine.png"
+          },
+          {
+              "id": "Heart",
+              "title": "PetCalm Spray",
+              "description": "Minskar oro och stress naturligt. Perfekt vid resor eller höga ljud.",
+              "button": "Köp PetCalm",
+              "image": "/products/petcalm.png"
+          },
+          {
+              "id": "Zap",
+              "title": "Multipower",
+              "description": "Dagligt vitamintillskott för allmänt välbefinnande.",
+              "button": "Köp Multipower",
+              "image": "/products/multivitamine.png"
+          }
+      ]
+  },
+  "benefits": {
+      "sectionTag": "• Varför Nordtass?",
+      "title": "Därför Väljer Fler Oss Varje Dag",
+      "benefits": [
+          {
+              "id": "01",
+              "title": "Aktiva Djur, Längre Liv",
+              "description": "Minska åldersrelaterade besvär med dagligt led- och näringsstöd.",
+              "image": "/images/activelonger.png"
+          },
+          {
+              "id": "02",
+              "title": "Daglig Maghälsa",
+              "description": "Främja ett starkt och balanserat mikrobiom i magen.",
+              "image": "/images/digestive.png"
+          },
+          {
+              "id": "03",
+              "title": "Lugn & Trygg",
+              "description": "Dämpa stress vid resor, separation eller fyrverkerier.",
+              "image": "/images/calmsafe.png"
+          },
+          {
+              "id": "04",
+              "title": "Starkt Immunförsvar",
+              "description": "Hjälp ditt djur stå emot infektioner året runt.",
+              "image": "/images/immune.png"
+          },
+          {
+              "id": "05",
+              "title": "Enkel Dosering",
+              "description": "Inga tabletter, inga konflikter – bara smidiga format.",
+              "image": "/images/easy.png"
+          }
+      ]
+  },
+  "stats": {
+      "sectionTag": "• Resultat",
+      "title": "Vad Våra Kunder Upplever",
+      "metrics": [
+          {
+              "icon": "/margin.svg",
+              "title": "Upp till 78% Bruttomarginal\nPrisvärd Premium"
+          },
+          {
+              "icon": "/fast.svg",
+              "title": "Under 10 sekunder\nEnkel Dosering"
+          },
+          {
+              "icon": "/natural-compat.svg",
+              "title": "100% Naturligt\nPassar Alla Djur"
+          },
+          {
+              "icon": "/support.svg",
+              "title": "Kundstöd & Rådgivning\nFör Friskare Liv"
+          }
+      ]
+  },
+  "useCases": {
+      "sectionTag": "• Användningsområden",
+      "title": "Riktiga Scenarier, Riktigt Välmående",
+      "cases": [
+          {
+              "title": "Äldre Djur",
+              "description": "Led- och immunstöd för seniorhundar och -katter.",
+              "image": "/images/use1.png"
+          },
+          {
+              "title": "Resdagar",
+              "description": "Spray som minskar oro under transport och nya miljöer.",
+              "image": "/images/use2.png"
+          },
+          {
+              "title": "Daglig Rutin",
+              "description": "Gör tillskott till en naturlig del av måltiden.",
+              "image": "/images/use3.png"
+          }
+      ]
+  },
+  "industrySolutions": {
+      "sectionTag": "• För Alla Djur",
+      "title": "Hälsa för Varje Typ av Djur",
+      "currentType": "Aktiva Hundar",
+      "ctaButton": "Se Alla Produkttyper",
+      "houseImage": "/images/3d/a.png",
+      "segments": [
+          { "type": "Innekatter", "image": "/images/3d/a.png" },
+          { "type": "Valpar", "image": "/images/3d/b.png" },
+          { "type": "Seniorhundar", "image": "/images/3d/c.png" },
+          { "type": "Stressade Djur", "image": "/images/3d/d.png" }
+      ]
+  },
+  "testimonials": {
+      "sectionTag": "• Kundrecensioner",
+      "title": "Vad Våra Kunder Säger",
+      "testimonial": [
+          {
+              "quote": "Efter bara två veckor springer vår äldre hund som förr!",
+              "author": "Marcus L.",
+              "image": "/testimonials/marcus.jpg"
+          },
+          {
+              "quote": "Vår katts mage fungerar mycket bättre – inga fler olyckor!",
+              "author": "Amanda S.",
+              "image": "/testimonials/amanda.jpg"
+          },
+          {
+              "quote": "Lugnande sprayen fungerar fantastiskt under åskväder. Max är så mycket mer avslappnad nu!",
+              "author": "Sarah M.",
+              "image": "/testimonials/marcus.jpg"
+          },
+          {
+              "quote": "Jag var skeptisk först, men ledtillskottet har gett vår 12-åriga labrador ett nytt liv.",
+              "author": "David K.",
+              "image": "/testimonials/amanda.jpg"
+          },
+          {
+              "quote": "Naturliga ingredienser som faktiskt fungerar! Vår valps immunförsvar är starkare än någonsin.",
+              "author": "Lisa T.",
+              "image": "/testimonials/marcus.jpg"
+          }
+      ]
+  },
+  "compatibility": {
+      "sectionTag": "• Kompatibilitet & Support",
+      "title": "Fungerar Med Alla Djur",
+      "integrations": [
+          { "icon": "/species/dog.svg", "name": "Hundar" },
+          { "icon": "/species/cat.svg", "name": "Katter" },
+          { "icon": "/species/puppy.svg", "name": "Valpar" },
+          { "icon": "/species/senior.svg", "name": "Seniorer" }
+      ],
+      "features": {
+          "title": "Fördelar i Korthet",
+          "list": [
+              "Naturliga Ingredienser",
+              "Lätt att Ge",
+              "Vetenskapligt Formulerade",
+              "Passar Alla Livsfaser",
+              "Prisvärt Premium"
+          ]
+      },
+      "cta": {
+          "title": "Gör Det Enklare att Vara en Ansvarsfull Husdjursägare.",
+          "description": "Inga prenumerationer. Inga tricks. Bara välmående från dag ett.",
+          "button": "Gå till Butik",
+          "backgroundImage": "/landingpage/hero.png"
+      }
+  }
+}
