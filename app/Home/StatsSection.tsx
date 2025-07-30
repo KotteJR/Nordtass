@@ -1,10 +1,10 @@
 'use client';
-import Image from 'next/image';
+
 import { DollarSign, Clock, Leaf, Headphones } from 'lucide-react';
 import { useDefaultContent } from '../hooks/useContent';
 
 // Icon mapping for stats with more relevant icons
-const iconMap: { [key: string]: any } = {
+const iconMap: { [key: string]: React.ComponentType<{ size?: number; className?: string }> } = {
   '/margin.svg': DollarSign,      // For pricing/margin
   '/fast.svg': Clock,             // For speed/timing
   '/natural-compat.svg': Leaf,    // For natural/organic
@@ -37,7 +37,7 @@ export function StatsSection() {
 
         {/* Metrics Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
-          {stats.metrics.map((metric: any) => {
+          {stats.metrics.map((metric: { icon: string; title: string }) => {
             const IconComponent = iconMap[metric.icon] || DollarSign;
             return (
               <div key={metric.icon} className="flex flex-col items-center justify-start text-center">

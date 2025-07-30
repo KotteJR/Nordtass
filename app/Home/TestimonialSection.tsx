@@ -19,6 +19,18 @@ export function TestimonialsSection() {
   }
 
   const { testimonials } = content;
+  
+  // Add safety checks to prevent runtime errors
+  if (!testimonials || !testimonials.testimonial || testimonials.testimonial.length === 0) {
+    return (
+      <section className="bg-white py-28 px-6">
+        <div className="max-w-6xl mx-auto text-center">
+          <div>No testimonials available</div>
+        </div>
+      </section>
+    );
+  }
+
   const currentTestimonial = testimonials.testimonial[currentIndex];
 
   const handlePrevious = () => {
@@ -45,7 +57,7 @@ export function TestimonialsSection() {
           {/* Quote */}
           <div className="text-center mb-12">
             <blockquote className="text-[#535353] text-xl md:text-2xl leading-relaxed mb-8 min-h-[120px] flex items-center justify-center">
-              "{currentTestimonial.quote}"
+              &ldquo;{currentTestimonial.quote}&rdquo;
             </blockquote>
             
             {/* Author with Image */}
@@ -76,7 +88,7 @@ export function TestimonialsSection() {
 
             {/* Dots */}
             <div className="flex items-center space-x-3">
-              {testimonials.testimonial.map((_: any, i: number) => (
+              {testimonials.testimonial.map((_, i: number) => (
                 <button
                   key={i}
                   onClick={() => setCurrentIndex(i)}

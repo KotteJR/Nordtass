@@ -1,10 +1,10 @@
 'use client';
-import Image from 'next/image';
+
 import { ShoppingBag, Leaf, Heart, Microscope, Gift } from 'lucide-react';
 import { useDefaultContent } from '../hooks/useContent';
 
 // Icon mapping for hero features
-const iconMap: { [key: string]: any } = {
+const iconMap: { [key: string]: React.ComponentType<{ size?: number; className?: string }> } = {
   '/natural.svg': Leaf,
   '/digestion.svg': Heart,
   '/science.svg': Microscope,
@@ -49,7 +49,7 @@ export function HeroSection() {
             </button>
 
             <div className="flex flex-col gap-4 mt-10">
-              {hero.features.map((feature: any, index: number) => {
+              {hero.features.map((feature: { icon: string; title: string; description: string }, index: number) => {
                 const IconComponent = iconMap[feature.icon] || Leaf; // Default fallback icon
                 return (
                   <div key={index} className="flex items-center gap-3 text-sm">

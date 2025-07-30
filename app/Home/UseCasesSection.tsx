@@ -1,5 +1,5 @@
 'use client';
-import Image from 'next/image';
+
 import { useDefaultContent } from '../hooks/useContent';
 
 export function UseCasesSection() {
@@ -30,7 +30,7 @@ export function UseCasesSection() {
 
         {/* Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {useCases.cases.map((item: any) => (
+          {useCases.cases.map((item: { title: string; description: string; image: string }) => (
             <div
               key={item.title}
               className="relative rounded-[28px] overflow-hidden h-[34rem] bg-cover bg-center"

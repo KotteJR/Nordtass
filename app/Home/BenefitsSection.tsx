@@ -1,5 +1,5 @@
 'use client';
-import Image from 'next/image';
+
 import { useDefaultContent } from '../hooks/useContent';
 
 export function BenefitsSection() {
@@ -30,7 +30,7 @@ export function BenefitsSection() {
 
         {/* Grid */}
         <div className="grid grid-cols-2 grid-rows-3 w-full h-[168rem] lg:h-[84rem]">
-          {benefits.benefits.map((item: any, i: number) => (
+          {benefits.benefits.map((item: { id: string; title: string; description: string; image: string }, i: number) => (
             <BenefitCard
               key={item.id}
               {...item}

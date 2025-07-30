@@ -39,7 +39,7 @@ const FeaturedProductsSection = () => {
 
         <div className="w-full overflow-x-auto">
           <div className="flex gap-8 pb-4">
-            {featuredProducts.products.map((product: any) => {
+            {featuredProducts.products.map((product: { id: string; title: string; description: string; button: string; image: string }) => {
               const ProductIconComponent = iconMap[product.id];
 
               return (

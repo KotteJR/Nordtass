@@ -1,11 +1,11 @@
 'use client';
-import Image from 'next/image';
+
 import Link from 'next/link';
 import { ShoppingBag, Dog, Cat, Heart, Clock } from 'lucide-react';
 import { useDefaultContent } from '../hooks/useContent';
 
 // Icon mapping for pet categories
-const petIconMap: { [key: string]: any } = {
+const petIconMap: { [key: string]: React.ComponentType<{ size?: number; className?: string }> } = {
   '/species/dog.svg': Dog,
   '/species/cat.svg': Cat,
   '/species/puppy.svg': Heart, // Heart for puppies (young/love)
@@ -39,7 +39,7 @@ export function CompatibilitySection() {
 
           {/* Pet Category Icons */}
           <div className="flex flex-wrap gap-4 mt-8">
-            {compatibility.integrations.map((integration: any) => {
+            {compatibility.integrations.map((integration: { icon: string; name: string }) => {
               const IconComponent = petIconMap[integration.icon] || Dog;
               return (
                 <div

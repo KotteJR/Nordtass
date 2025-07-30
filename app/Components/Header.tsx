@@ -1,10 +1,12 @@
 'use client';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { ShoppingCart, User, Menu, X, Globe } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 
 export function Header() {
+  const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
@@ -12,6 +14,9 @@ export function Header() {
   const { language, setLanguage } = useLanguage();
 
   useEffect(() => {
+    // Only run on client side
+    if (typeof window === 'undefined') return;
+    
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
       
@@ -33,7 +38,7 @@ export function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [lastScrollY]);
 
-  const isTransparent = !isScrolled && window.location.pathname === '/';
+  const isTransparent = !isScrolled && pathname === '/';
 
   const toggleLanguage = () => {
     setLanguage(language === 'en' ? 'sv' : 'en');

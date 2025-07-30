@@ -1,6 +1,7 @@
 'use client';
 import { useState } from 'react';
-import { Search, ChevronDown, ShoppingCart, Zap, X } from 'lucide-react';
+import Image from 'next/image';
+import { Search, ChevronDown, X } from 'lucide-react';
 
 const products = [
   {
@@ -109,9 +110,11 @@ export function ProductsPage() {
             <div key={product.id} className="bg-[#f8f8f8] rounded-[28px] p-6 pb-8 flex flex-col justify-between">
               <div>
                 <div className="w-full h-48 flex items-center justify-center mb-4">
-                  <img
+                  <Image
                     src={product.image}
                     alt={product.name}
+                    width={300}
+                    height={200}
                     className="w-full h-full object-contain"
                   />
                 </div>
