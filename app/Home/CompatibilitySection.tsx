@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { ShoppingBag, Dog, Cat, Heart, Clock } from 'lucide-react';
 import { useDefaultContent } from '../hooks/useContent';
+import Image from 'next/image';
 
 // Icon mapping for pet categories
 const petIconMap: { [key: string]: React.ComponentType<{ size?: number; className?: string }> } = {
@@ -17,8 +18,8 @@ export function CompatibilitySection() {
 
   if (loading || !content) {
     return (
-      <section className="bg-white py-24 px-6">
-        <div className="max-w-6xl mx-auto">
+      <section className="bg-white py-24">
+        <div className="max-w-7xl mx-auto px-6">
           <div className="animate-pulse">Loading...</div>
         </div>
       </section>
@@ -28,11 +29,11 @@ export function CompatibilitySection() {
   const { compatibility } = content;
 
   return (
-    <section className="bg-white py-24 px-6">
-      <div className="max-w-6xl mx-auto space-y-16">
+    <section className="bg-white py-24">
+      <div className="max-w-7xl mx-auto px-6 space-y-16">
         {/* Section Header */}
         <div>
-          <p className="text-[#2288ff] text-sm font-medium mb-2">{compatibility.sectionTag}</p>
+          <p className="text-[#8B4513] text-sm font-medium mb-2">{compatibility.sectionTag}</p>
           <h2 className="text-[#535353] text-3xl md:text-4xl font-medium">
             {compatibility.title}
           </h2>
@@ -46,7 +47,7 @@ export function CompatibilitySection() {
                   key={integration.name}
                   className="flex items-center gap-2 bg-[#f6f6f6] rounded-full px-4 py-2"
                 >
-                  <IconComponent size={20} className="text-[#2288ff]" />
+                  <IconComponent size={20} className="text-[#8B4513]" />
                   <span className="text-sm text-[#555]">{integration.name}</span>
                 </div>
               );
@@ -70,25 +71,34 @@ export function CompatibilitySection() {
         </div>
 
         {/* CTA Card */}
-        <div
-          className="rounded-[24px] bg-cover bg-center px-14 md:px-14 py-24 md:py-24"
-          style={{ backgroundImage: `url('${compatibility.cta.backgroundImage}')` }}
-        >
-          <div className="grid md:grid-cols-2">
-            <div className="max-w-md space-y-4">
-              <h4 className="text-2xl md:text-3xl font-medium leading-snug text-white">
+        <div className="rounded-[24px] bg-[#F4F5F7] px-14 md:px-14 py-12 md:py-12">
+          <div className="grid md:grid-cols-5 gap-12 items-center">
+            {/* Left side: Text Content */}
+            <div className="max-w-md space-y-4 md:col-span-2">
+              <h4 className="text-2xl md:text-3xl font-medium leading-snug text-[#535353]">
                 {compatibility.cta.title}
               </h4>
-              <p className="text-white/80 text-sm">
+              <p className="text-gray-600 text-sm">
                 {compatibility.cta.description}
               </p>
               <Link
                 href="#"
-                className="inline-flex items-center gap-2 mt-4 text-[#1875f0] bg-white px-5 py-2.5 rounded-full text-sm font-medium hover:opacity-90 transition"
+                className="inline-flex items-center gap-2 mt-4 text-[#8B4513] bg-white px-5 py-2.5 rounded-full text-sm font-medium hover:opacity-90 transition"
               >
                 <ShoppingBag size={16} />
                 {compatibility.cta.button}
               </Link>
+            </div>
+            
+            {/* Right side: Image */}
+            <div className="relative h-74 w-full md:col-span-3">
+              <Image
+                src="/images/hero1.png"
+                alt="NordTass Products"
+                layout="fill"
+                objectFit="contain"
+                className="object-right"
+              />
             </div>
           </div>
         </div>

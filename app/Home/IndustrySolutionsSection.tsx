@@ -10,8 +10,8 @@ export function IndustrySolutionsSection() {
 
   if (loading || !content) {
     return (
-      <section className="bg-white py-28 px-6">
-        <div className="max-w-7xl mx-auto">
+      <section className="bg-white py-28">
+        <div className="max-w-7xl mx-auto px-6">
           <div className="animate-pulse">Loading...</div>
         </div>
       </section>
@@ -30,11 +30,11 @@ export function IndustrySolutionsSection() {
   };
 
   return (
-    <section className="bg-white py-28 px-6">
-      <div className="max-w-7xl mx-auto">
+    <section className="bg-white py-28">
+      <div className="max-w-7xl mx-auto px-6">
         {/* Top Heading */}
         <div className="text-left">
-          <p className="text-[#2288ff] text-sm mb-2">{industrySolutions.sectionTag}</p>
+          <p className="text-[#8B4513] text-sm mb-2">{industrySolutions.sectionTag}</p>
           <h2 className="text-[#535353] text-3xl md:text-4xl font-medium">
             {industrySolutions.title}
           </h2>
@@ -59,15 +59,15 @@ export function IndustrySolutionsSection() {
               </span>
             </div>
             <div className="flex items-center overflow-hidden rounded-full ml-auto">
-              <button 
+              <button
                 onClick={handlePrevious}
-                className="w-9 h-9 flex items-center justify-center bg-[#e6f0ff] text-[#2288ff] transition hover:bg-blue-200"
+                className="w-9 h-9 flex items-center justify-center bg-[#FFFBF5] text-[#8B4513] transition hover:bg-[#F7F2EC]"
               >
                 <ArrowLeft size={16} />
               </button>
-              <button 
+              <button
                 onClick={handleNext}
-                className="w-9 h-9 flex items-center justify-center bg-[#2288ff] text-white transition hover:bg-blue-600"
+                className="w-9 h-9 flex items-center justify-center bg-[#8B4513] text-white transition hover:bg-amber-800"
               >
                 <ArrowRight size={16} />
               </button>
@@ -77,7 +77,7 @@ export function IndustrySolutionsSection() {
 
         {/* CTA Button */}
         <div className="flex justify-center mt-12">
-          <button className="text-sm text-[#2288ff] font-medium bg-[#f6faff] px-6 py-3 rounded-full hover:bg-[#e6f0ff] transition-all duration-150 flex items-center gap-2">
+          <button className="text-sm text-[#8B4513] font-medium bg-[#FFFBF5] px-6 py-3 rounded-full hover:bg-[#F7F2EC] transition-all duration-150 flex items-center gap-2">
             <Building2 size={16} />
             {industrySolutions.ctaButton}
             <ArrowRight size={16} />

@@ -7,8 +7,8 @@ export function BenefitsSection() {
 
   if (loading || !content) {
     return (
-      <section className="bg-white py-24 px-6">
-        <div className="max-w-7xl mx-auto">
+      <section className="bg-white py-24">
+        <div className="max-w-7xl mx-auto px-6">
           <div className="animate-pulse">Loading...</div>
         </div>
       </section>
@@ -18,11 +18,11 @@ export function BenefitsSection() {
   const { benefits } = content;
 
   return (
-    <section className="bg-white py-24 px-6">
-      <div className="max-w-7xl mx-auto">
+    <section className="bg-white py-24">
+      <div className="max-w-7xl mx-auto px-6">
         {/* Title Block */}
         <div className="mb-12">
-          <p className="text-[#2288ff] text-sm mb-2">{benefits.sectionTag}</p>
+          <p className="text-[#8B4513] text-sm mb-2">{benefits.sectionTag}</p>
           <h2 className="text-[#535353] text-4xl font-medium">
             {benefits.title}
           </h2>
@@ -83,7 +83,7 @@ function BenefitCard({
           WebkitMask: 'radial-gradient(circle at center, transparent 20%, rgba(0,0,0,0.3) 40%, rgba(0,0,0,0.8) 70%, black 100%)'
         }}
       />
-      <div className="absolute top-6 left-6 bg-[#2288ff] text-white text-sm px-2 py-1 rounded font-medium">
+      <div className="absolute top-6 left-6 bg-[#8B4513] text-white text-sm px-2 py-1 rounded font-medium">
         {id}
       </div>
       <div className="absolute bottom-6 left-6 right-6 text-white z-10">

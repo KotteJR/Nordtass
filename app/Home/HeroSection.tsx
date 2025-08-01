@@ -1,14 +1,15 @@
 'use client';
 
+import Image from 'next/image';
 import { ShoppingBag, Leaf, Heart, Microscope, Gift } from 'lucide-react';
 import { useDefaultContent } from '../hooks/useContent';
 
-// Icon mapping for hero features
+// Icon mapping for features
 const iconMap: { [key: string]: React.ComponentType<{ size?: number; className?: string }> } = {
-  '/natural.svg': Leaf,
-  '/digestion.svg': Heart,
-  '/science.svg': Microscope,
-  '/easyuse.svg': Gift,
+  'Natural Ingredients': Leaf,
+  'Gentle on the Stomach': Heart,
+  'Scientifically Backed': Microscope,
+  'Easy to Give': Gift,
 };
 
 export function HeroSection() {
@@ -16,10 +17,8 @@ export function HeroSection() {
 
   if (loading || !content) {
     return (
-      <section className="h-screen w-full text-white relative flex items-center bg-gray-900">
-        <div className="max-w-7xl mx-auto px-6 w-full relative z-10">
-          <div className="animate-pulse">Loading...</div>
-        </div>
+      <section className="h-screen w-full bg-[#F8F8F8] flex items-center justify-center">
+        <div className="animate-pulse text-gray-500">Loading Content...</div>
       </section>
     );
   }
@@ -27,42 +26,57 @@ export function HeroSection() {
   const { hero } = content;
 
   return (
-    <section 
-      className="h-screen w-full text-white relative flex items-center bg-cover bg-center"
-      style={{ backgroundImage: "url('/landingpage/hero.png')" }}
-    >
-      <div className="max-w-7xl mx-auto px-6 w-full relative z-10">
-        <div className="grid md:grid-cols-2">
-          <div className="flex flex-col gap-6 ">
-            <div className="text-[#dceefb] text-base font-light">{hero.tagline}</div>
+    <section className="h-screen w-full bg-[#F4F5F7] flex items-center justify-center">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="grid md:grid-cols-2 items-center gap-12">
+          
+          {/* Left Column: Text Content */}
+          <div className="flex flex-col gap-y-5">
+            <div className="flex items-center gap-3 text-sm text-gray-500 font-light">
+              <Leaf size={16} className="text-gray-400" />
+              {hero.tagline}
+              <Leaf size={16} className="text-gray-400" />
+            </div>
+            
             <h1 
-              className="text-4xl md:text-5xl font-medium leading-tight"
+              className="text-4xl lg:text-5xl font-light text-gray-800 leading-tight"
               dangerouslySetInnerHTML={{ __html: hero.title }}
             />
-            <p className="text-[#dceefb] text-lg max-w-xl leading-relaxed">
+            
+            <p className="text-gray-600 text-base max-w-lg leading-relaxed">
               {hero.description}
             </p>
 
-            <button className="flex items-center gap-2 bg-white text-[#2288ff] font-medium text-base rounded-full px-6 py-3 w-fit mt-2 hover:opacity-90 transition">
-              <ShoppingBag size={20} />
+            <button className="flex items-center gap-2 bg-[#D1A15A] text-white font-medium text-sm rounded-full px-6 py-2.5 w-fit mt-1 hover:bg-[#D1A25B]">
+              <ShoppingBag size={18} />
               {hero.ctaButton}
             </button>
 
-            <div className="flex flex-col gap-4 mt-10">
-              {hero.features.map((feature: { icon: string; title: string; description: string }, index: number) => {
-                const IconComponent = iconMap[feature.icon] || Leaf; // Default fallback icon
+            <div className="flex flex-col gap-3 mt-5">
+              {hero.features.slice(0, 4).map((feature) => {
+                const Icon = iconMap[feature.title] || Leaf;
                 return (
-                  <div key={index} className="flex items-center gap-3 text-sm">
-                    <div className="flex-shrink-0 w-6 h-6 flex items-center justify-center">
-                      <IconComponent size={22} className="text-white" />
-                    </div>
+                  <div key={feature.title} className="flex items-center gap-3 text-sm text-gray-600">
+                    <Icon size={16} className="text-[#D1A15A]" />
                     <span>
-                      <span className="text-white font-medium">{feature.title}</span> – {feature.description}
+                      <span className="font-semibold text-gray-700">{feature.title}</span> – {feature.description}
                     </span>
                   </div>
                 );
               })}
             </div>
+          </div>
+
+          {/* Right Column: Image */}
+          <div className="w-full h-full flex items-center justify-center">
+            <Image
+              src="/images/hero1.png"
+              alt="NordTass Products Arrangement"
+              width={650}
+              height={650}
+              priority
+              className="object-contain"
+            />
           </div>
         </div>
       </div>

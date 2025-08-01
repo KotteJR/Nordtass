@@ -7,8 +7,8 @@ export function UseCasesSection() {
 
   if (loading || !content) {
     return (
-      <section className="bg-white py-24 px-6">
-        <div className="max-w-7xl mx-auto">
+      <section className="bg-white py-24">
+        <div className="max-w-7xl mx-auto px-6">
           <div className="animate-pulse">Loading...</div>
         </div>
       </section>
@@ -18,11 +18,11 @@ export function UseCasesSection() {
   const { useCases } = content;
 
   return (
-    <section className="bg-white py-24 px-6">
-      <div className="max-w-7xl mx-auto">
+    <section className="bg-white py-24">
+      <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-12">
-          <p className="text-[#2288ff] text-sm mb-2">{useCases.sectionTag}</p>
+          <p className="text-[#8B4513] text-sm mb-2">{useCases.sectionTag}</p>
           <h2 className="text-[#535353] text-3xl md:text-4xl font-medium">
             {useCases.title}
           </h2>

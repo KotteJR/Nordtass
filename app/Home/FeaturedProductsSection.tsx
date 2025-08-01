@@ -31,7 +31,7 @@ const FeaturedProductsSection = () => {
     <section className="bg-white py-24">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
-          <p className="text-[#2288ff] text-sm font-medium mb-4">{featuredProducts.sectionTag}</p>
+          <p className="text-[#8B4513] text-sm font-medium mb-4">{featuredProducts.sectionTag}</p>
           <h2 className="text-[#535353] text-3xl md:text-4xl text-center font-medium mb-12">
             {featuredProducts.title}
           </h2>
@@ -52,14 +52,14 @@ const FeaturedProductsSection = () => {
                   </div>
 
                   <div className="mb-4">
-                    <div className="bg-[#2288ff] text-white text-xs font-semibold px-2 py-1 rounded w-fit mb-3 flex items-center justify-center">
+                    <div className="bg-[#8B4513] text-white text-xs font-semibold px-2 py-1 rounded w-fit mb-3 flex items-center justify-center">
                       {ProductIconComponent && <ProductIconComponent size={16} className="text-white" />}
                     </div>
                     <h3 className="text-xl font-medium mb-2">{product.title}</h3>
                     <p className="text-[#aeaeae] text-sm leading-snug">{product.description}</p>
                   </div>
 
-                  <button className="flex items-center gap-2 mt-auto bg-white text-[#2288ff] font-medium text-sm rounded-full px-5 py-2 w-fit hover:opacity-90 transition">
+                  <button className="flex items-center gap-2 mt-auto bg-white text-[#8B4513] font-medium text-sm rounded-full px-5 py-2 w-fit hover:opacity-90 transition">
                     {product.button}
                   </button>
                 </div>

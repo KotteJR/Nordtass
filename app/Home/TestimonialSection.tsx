@@ -10,8 +10,8 @@ export function TestimonialsSection() {
 
   if (loading || !content) {
     return (
-      <section className="bg-white py-28 px-6">
-        <div className="max-w-6xl mx-auto">
+      <section className="bg-white py-28">
+        <div className="max-w-7xl mx-auto px-6">
           <div className="animate-pulse">Loading...</div>
         </div>
       </section>
@@ -23,8 +23,8 @@ export function TestimonialsSection() {
   // Add safety checks to prevent runtime errors
   if (!testimonials || !testimonials.testimonial || testimonials.testimonial.length === 0) {
     return (
-      <section className="bg-white py-28 px-6">
-        <div className="max-w-6xl mx-auto text-center">
+      <section className="bg-white py-28">
+        <div className="max-w-6xl mx-auto text-center px-6">
           <div>No testimonials available</div>
         </div>
       </section>
@@ -42,11 +42,11 @@ export function TestimonialsSection() {
   };
 
   return (
-    <section className="bg-white py-28 px-6">
-      <div className="max-w-6xl mx-auto">
+    <section className="bg-white py-28">
+      <div className="max-w-7xl mx-auto px-6">
         {/* Section Title */}
         <div className="text-center mb-16">
-          <p className="text-[#2288ff] text-sm mb-2">{testimonials.sectionTag}</p>
+          <p className="text-[#8B4513] text-sm mb-2">{testimonials.sectionTag}</p>
           <h2 className="text-[#535353] text-3xl md:text-4xl font-medium">
             {testimonials.title}
           </h2>
@@ -83,7 +83,7 @@ export function TestimonialsSection() {
               className="p-2 transition-colors"
               aria-label="Previous testimonial"
             >
-              <ChevronLeft size={24} className="text-gray-400 hover:text-[#2288ff] transition-colors" />
+              <ChevronLeft size={24} className="text-gray-400 hover:text-[#8B4513] transition-colors" />
             </button>
 
             {/* Dots */}
@@ -94,7 +94,7 @@ export function TestimonialsSection() {
                   onClick={() => setCurrentIndex(i)}
                   className={`w-2 h-2 rounded-full transition-all duration-200 ${
                     i === currentIndex 
-                      ? 'bg-[#2288ff] scale-125' 
+                      ? 'bg-[#8B4513] scale-125' 
                       : 'bg-gray-300 hover:bg-gray-400'
                   }`}
                   aria-label={`Go to testimonial ${i + 1}`}
@@ -108,7 +108,7 @@ export function TestimonialsSection() {
               className="p-2 transition-colors"
               aria-label="Next testimonial"
             >
-              <ChevronRight size={24} className="text-gray-400 hover:text-[#2288ff] transition-colors" />
+              <ChevronRight size={24} className="text-gray-400 hover:text-[#8B4513] transition-colors" />
             </button>
           </div>
         </div>

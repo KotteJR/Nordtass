@@ -30,7 +30,7 @@ export function StatsSection() {
     <section className="bg-white py-24 px-6">
       <div className="max-w-6xl mx-auto text-center">
         {/* Section Title */}
-        <p className="text-[#2288ff] text-sm font-medium mb-2">{stats.sectionTag}</p>
+        <p className="text-[#8B4513] text-sm font-medium mb-2">{stats.sectionTag}</p>
         <h2 className="text-[#535353] text-3xl md:text-4xl font-medium mb-16">
           {stats.title}
         </h2>
@@ -41,8 +41,8 @@ export function StatsSection() {
             const IconComponent = iconMap[metric.icon] || DollarSign;
             return (
               <div key={metric.icon} className="flex flex-col items-center justify-start text-center">
-                <div className="w-16 h-16 bg-[#f0f7ff] rounded-lg flex items-center justify-center mb-4">
-                  <IconComponent size={32} className="text-[#2288ff]" />
+                <div className="w-16 h-16 bg-[#FFFBF5] rounded-lg flex items-center justify-center mb-4">
+                  <IconComponent size={32} className="text-[#8B4513]" />
                 </div>
                 <p className="text-[#535353] text-base font-normal leading-snug whitespace-pre-line">
                   {metric.title}
