@@ -7,7 +7,11 @@ import { Accordion } from '@/app/Components/Accordion';
 
 import { ProductStats } from '@/app/Components/ProductStats';
 
-export default function ProductDetailPage({ params }: { params: { id: string } }) {
+interface ProductPageProps {
+  params: { id: string };
+}
+
+export default function ProductDetailPage({ params }: ProductPageProps) {
   const { content, loading } = useDefaultContent();
 
   if (loading || !content) {
