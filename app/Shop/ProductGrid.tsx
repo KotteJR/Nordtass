@@ -96,10 +96,10 @@ export function ProductsPage() {
                   </div>
                 </Link>
                 <div className="flex gap-3 mt-auto">
-                  <button className="flex-1 text-sm text-[#535353] bg-white px-4 py-2 rounded-full hover:bg-gray-50 transition-colors text-center">
+                  <button key={`${product.id}-cart`} className="flex-1 text-sm text-[#535353] bg-white px-4 py-2 rounded-full hover:bg-gray-50 transition-colors text-center">
                     Add to Cart
                   </button>
-                  <button className="flex-1 text-sm text-white bg-[#8B4513] px-4 py-2 rounded-full hover:opacity-90 transition-opacity text-center">
+                  <button key={`${product.id}-buy`} className="flex-1 text-sm text-white bg-[#8B4513] px-4 py-2 rounded-full hover:opacity-90 transition-opacity text-center">
                     Buy Now
                   </button>
                 </div>

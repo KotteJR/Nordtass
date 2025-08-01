@@ -4,14 +4,14 @@ import Image from 'next/image';
 import { Footer } from '@/app/Components/footer';
 import { ShoppingBag } from 'lucide-react';
 import { Accordion } from '@/app/Components/Accordion';
-
 import { ProductStats } from '@/app/Components/ProductStats';
+import type { FC } from 'react';
 
 interface ProductPageProps {
   params: { id: string };
 }
 
-export default function ProductDetailPage({ params }: ProductPageProps) {
+const ProductDetailPage: FC<ProductPageProps> = ({ params }) => {
   const { content, loading } = useDefaultContent();
 
   if (loading || !content) {
@@ -38,7 +38,6 @@ export default function ProductDetailPage({ params }: ProductPageProps) {
         <div>
           <div className="max-w-7xl mx-auto px-6 py-12">
             <div className="grid md:grid-cols-2 gap-12 items-center">
-              {/* Image Gallery */}
               <div className="relative h-96 group overflow-hidden rounded-lg">
                 <Image
                   src={product.image}
@@ -48,13 +47,10 @@ export default function ProductDetailPage({ params }: ProductPageProps) {
                   className="rounded-lg transition-transform duration-300 ease-in-out group-hover:scale-105"
                 />
               </div>
-
-              {/* Product Info */}
               <div>
                 <h1 className="text-3xl font-medium text-[#535353] mb-4">{product.title}</h1>
                 <p className="text-lg text-[#8B4513] font-semibold mb-6">$XX.XX</p>
                 <p className="text-gray-600 mb-8">{product.description}</p>
-                
                 <div className="flex items-center gap-4 mb-8">
                   <input
                     type="number"
@@ -67,11 +63,10 @@ export default function ProductDetailPage({ params }: ProductPageProps) {
                     Add to Cart
                   </button>
                 </div>
-
                 <div className="space-y-2">
-                                  <Accordion title="Product Details">
-                  <p>Detailed information about the product, its benefits, and what makes it special. This is where you can elaborate on the product&apos;s unique selling points.</p>
-                </Accordion>
+                  <Accordion title="Product Details">
+                    <p>Detailed information about the product, its benefits, and what makes it special. This is where you can elaborate on the product&apos;s unique selling points.</p>
+                  </Accordion>
                   <Accordion title="Ingredients">
                     <p>A list of all ingredients used in the product. You could use a list format here for better readability.</p>
                   </Accordion>
@@ -88,4 +83,6 @@ export default function ProductDetailPage({ params }: ProductPageProps) {
       <Footer />
     </div>
   );
-}
+};
+
+export default ProductDetailPage;
