@@ -65,9 +65,9 @@ export default function ProductDetailPage({ params }: { params: { id: string } }
                 </div>
 
                 <div className="space-y-2">
-                  <Accordion title="Product Details">
-                    <p>Detailed information about the product, its benefits, and what makes it special. This is where you can elaborate on the product's unique selling points.</p>
-                  </Accordion>
+                                  <Accordion title="Product Details">
+                  <p>Detailed information about the product, its benefits, and what makes it special. This is where you can elaborate on the product&apos;s unique selling points.</p>
+                </Accordion>
                   <Accordion title="Ingredients">
                     <p>A list of all ingredients used in the product. You could use a list format here for better readability.</p>
                   </Accordion>
