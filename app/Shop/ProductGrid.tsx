@@ -14,6 +14,8 @@ const iconMap: { [key: string]: React.ComponentType<{ size?: number; className?:
   'Zap': Zap,
 };
 
+import Link from 'next/link';
+
 export function ProductsPage() {
   const { content, loading } = useDefaultContent();
   const [query, setQuery] = useState('');
@@ -38,12 +40,12 @@ export function ProductsPage() {
 
 
   return (
-    <section className="bg-white py-24 px-6">
-      <div className="max-w-7xl mx-auto">
+    <section className="bg-white py-24">
+      <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
         <div className="mb-12">
           <h2 className="text-[#535353] text-3xl md:text-4xl font-medium">
-            Explore Our Smart Home Devices
+            Explore Our Products
           </h2>
         </div>
 
@@ -80,25 +82,27 @@ export function ProductsPage() {
             const ProductIconComponent = iconMap[product.id];
 
             return (
-              <div
-                key={product.id}
-                className="bg-[#f8f8f8] rounded-[28px] p-6 pb-8 flex flex-col justify-between text-[#535353]"
-              >
-                <div className="w-full flex justify-center mb-6">
-                  <Image src={product.image} alt={product.title} width={200} height={200} className="object-contain" />
-                </div>
-
-                <div className="mb-4">
-                  <div className="bg-[#8B4513] text-white text-xs font-semibold px-2 py-1 rounded w-fit mb-3 flex items-center justify-center">
-                    {ProductIconComponent && <ProductIconComponent size={16} className="text-white" />}
+              <div key={product.id} className="bg-[#f8f8f8] rounded-[28px] p-6 pb-8 flex flex-col justify-between text-[#535353] group">
+                <Link href={`/products/${product.id}`} className="flex-grow">
+                  <div className="w-full flex justify-center mb-6">
+                    <Image src={product.image} alt={product.title} width={200} height={200} className="object-contain" />
                   </div>
-                  <h3 className="text-xl font-medium mb-2">{product.title}</h3>
-                  <p className="text-[#aeaeae] text-sm leading-snug">{product.description}</p>
+                  <div className="mb-4">
+                    <div className="bg-[#8B4513] text-white text-xs font-semibold px-2 py-1 rounded w-fit mb-3 flex items-center justify-center">
+                      {ProductIconComponent && <ProductIconComponent size={16} className="text-white" />}
+                    </div>
+                    <h3 className="text-xl font-medium mb-2 group-hover:text-[#8B4513] transition-colors">{product.title}</h3>
+                    <p className="text-[#aeaeae] text-sm leading-snug">{product.description}</p>
+                  </div>
+                </Link>
+                <div className="flex gap-3 mt-auto">
+                  <button className="flex-1 text-sm text-[#535353] bg-white px-4 py-2 rounded-full hover:bg-gray-50 transition-colors text-center">
+                    Add to Cart
+                  </button>
+                  <button className="flex-1 text-sm text-white bg-[#8B4513] px-4 py-2 rounded-full hover:opacity-90 transition-opacity text-center">
+                    Buy Now
+                  </button>
                 </div>
-
-                <button className="flex items-center gap-2 mt-auto bg-white text-[#8B4513] font-medium text-sm rounded-full px-5 py-2 w-fit hover:opacity-90 transition">
-                  {product.button}
-                </button>
               </div>
             );
           })}
