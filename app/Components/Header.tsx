@@ -17,27 +17,17 @@ export function Header() {
   const lastScrollY = useRef(0);
 
   useEffect(() => {
-    let lastScrollY = window.scrollY;
-
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-      
-      // Show/hide header based on scroll direction
-      if (currentScrollY > lastScrollY) {
-        // Scrolling down
-        if (currentScrollY > 100) {
-          setIsVisible(false);
-        }
+
+      if (currentScrollY > lastScrollY.current && currentScrollY > 100) {
+        setIsVisible(false);
       } else {
-        // Scrolling up
         setIsVisible(true);
       }
       
-      // Update background state
       setIsScrolled(currentScrollY > 50);
-      
-      // Update the last scroll position
-      lastScrollY = currentScrollY <= 0 ? 0 : currentScrollY;
+      lastScrollY.current = currentScrollY;
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });

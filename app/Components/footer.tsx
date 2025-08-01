@@ -20,7 +20,7 @@ export function Footer() {
               />
             </Link>
             <p className="text-sm text-gray-600">
-              Natural, science-backed supplements to support your pet's health and happiness through every stage of life.
+              Natural, science-backed supplements to support your pet&apos;s health and happiness through every stage of life.
             </p>
           </div>
 
