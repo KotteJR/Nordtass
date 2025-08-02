@@ -3,12 +3,13 @@ import ProductClientPage from './ProductClientPage';
 import { Footer } from '@/app/Components/footer';
 
 interface ProductPageProps {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 }
 
 export default async function ProductDetailPage({ params }: ProductPageProps) {
+  const { id } = await params;
   const content = await getContent();
-  const product = content.featuredProducts.products.find((p: any) => p.id === params.id);
+  const product = content.featuredProducts.products.find((p: any) => p.id === id);
 
   return (
     <div className="bg-white flex flex-col min-h-screen">
