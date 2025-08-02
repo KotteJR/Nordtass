@@ -18,7 +18,7 @@ async function ShopifyData(query: string) {
       return response.json();
     });
     return data;
-  } catch (error) {
+  } catch {
     throw new Error('Products not fetched');
   }
 }

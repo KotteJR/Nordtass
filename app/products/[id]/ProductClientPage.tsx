@@ -6,8 +6,15 @@ import { ShoppingBag } from 'lucide-react';
 import { Accordion } from '@/app/Components/Accordion';
 import { ProductStats } from '@/app/Components/ProductStats';
 
+interface Product {
+  id: string;
+  title: string;
+  description: string;
+  image: string;
+}
+
 interface ProductClientPageProps {
-  product: any;
+  product: Product | undefined;
 }
 
 const ProductClientPage: FC<ProductClientPageProps> = ({ product }) => {
